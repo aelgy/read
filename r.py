@@ -17,15 +17,20 @@ print('檔案讀取完了，總共有', len(data), '筆資料')
 
 # print('留言的平均長度是', sum_len/len(data))
 
-new = [] # 空清單
-for d in data: # 從 data 中取出每一個字串為 d
-	if len(d) < 100: # 從 d 中篩出字數少於 100 的字串
-		new.append(d) # 再把字串放回 new 清單中
-print('一共有', len(new), '筆留言長度小於 100')	
-print(new[0])
-print(new[1])
+# new = [] # 空清單
+# for d in data: # 從 data 中取出每一個字串為 d
+# 	if len(d) < 100: # 從 d 中篩出字數少於 100 的字串
+# 		new.append(d) # 再把字串放回 new 清單中
+# print('一共有', len(new), '筆留言長度小於 100')	
+# print(new[0])
+# print(new[1])
 
-
+good = []
+for d in data:
+	if 'good' in d:
+		good.append(d)
+print('一共有', len(new), '筆留言含有good')
+print(good[0])
 
 
 
